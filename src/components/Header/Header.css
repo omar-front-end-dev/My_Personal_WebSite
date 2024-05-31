@@ -1,0 +1,149 @@
+header.flex {
+  justify-content: center;
+  margin-top: 1.2rem;
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+}
+
+@media (max-width: 699px) {
+  header.flex {
+    justify-content: start;
+  }
+}
+
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0px 0 0px 15px;
+  border-radius: 55px;
+  box-shadow: 1px 1px 40px #2323242a;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+header ul.flex {
+  gap: 16px;
+}
+
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+header ul li a:hover {
+  color: var(--blue);
+}
+
+header button {
+  font-size: 1.3rem;
+}
+
+header button.menu {
+  display: none;
+}
+
+header .icon-menu,
+header button.mode {
+  background-color: var(--bgHeader);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  transition: 0.2s;
+  box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .icon-sun {
+  color: rgb(255, 165, 0);
+}
+
+header .icon-menu:hover,
+header button.mode:hover {
+  color: var(--title);
+  border: 1px solid rgb(244, 165, 96);
+}
+
+header .icon-close {
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+}
+header .close {
+  text-align: end;
+}
+
+header .icon-close:hover {
+  color: crimson;
+}
+
+header .fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  background-color: rgba(40, 40, 48, 0.91);
+  backdrop-filter: blur(4px);
+}
+
+@keyframes myMove {
+  0% {
+    scale: 0;
+  }
+
+  60% {
+    scale: 1.2;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+header .fixed ul.modal {
+  animation: myMove 0.77s 1;
+  width: 75%;
+  margin-inline: auto;
+
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+}
+
+header .fixed ul.modal li {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+
+header .fixed ul.modal li:first-child {
+  text-align: right;
+  border: none;
+  padding-bottom: 0;
+  padding-top: 0.2rem;
+  margin-bottom: -1rem;
+}
+
+header .fixed ul.modal li:last-child {
+  border: none;
+}
+
+header .fixed ul.modal li a {
+  font-size: 1rem;
+}
+
+@media (width < 700px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header button.menu {
+    display: flex;
+  }
+}

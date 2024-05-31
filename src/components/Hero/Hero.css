@@ -1,0 +1,104 @@
+section.hero {
+  margin-top: 3rem;
+}
+
+section.hero .parent-avatar.flex {
+  align-items: end;
+  gap: 0.6rem;
+  min-height: 88px;
+}
+
+section.hero .left-section {
+  flex-grow: 1;
+}
+
+section.hero .icon-verified {
+  color: var(--blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+section.hero .avatar {
+  width: 88px;
+  border-radius: 50%;
+  border: 1px solid darkorange;
+  padding: 1px;
+  box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
+}
+
+section.hero h1.title {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  margin: 15px 0;
+  color: var(--title);
+  height: 50px;
+}
+
+
+section.hero p.sub-title {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  line-height: 1.65rem;
+  margin-bottom: 32px;
+}
+
+section.hero .all-icons{
+  font-size: 1.2rem;
+  gap: 1.5rem;
+  color: var(--subtitle);
+}
+section.hero .all-icons li .icon{
+  transition: 0.3s;
+}
+section.hero .all-icons li .icon:hover{
+  display: inline-block;
+  transform: scale(1.1);
+  cursor: pointer;
+  color: var(--icon-hover);
+}
+
+section.hero .animation {
+  width: 100%;
+  translate: 100px;
+}
+.my-resume{
+  background-color: rgba(36, 37, 46, 1);
+  padding: 0.75rem 2rem;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 1.8rem;
+  border: 1px solid rgb(63 63 70);
+  display: inline-block;
+}
+@media (max-width: 698px) {
+  section.hero h1.title {
+    font-size: 1.5rem;
+    height: 90px;
+    line-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section.hero .parent-avatar.flex {
+    justify-content: center;
+  }
+  section.hero .all-icons{
+    justify-content: center;
+  }
+  .my-resume{
+    display: block;
+  }
+}
+.my-resume:hover {
+  scale: 0.97;
+}
+
+
+@media (max-width: 1250px) {
+  section.hero .animation {
+    display: none;
+  }
+}
