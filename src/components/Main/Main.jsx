@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { GoLink } from "react-icons/go";
 import toast, { Toaster } from "react-hot-toast";
-
+import { RiSlideshow4Line } from "react-icons/ri";
 
 export const Main = () => {
   const [currentActive, setCurrentActive] = useState("all");
@@ -58,7 +58,7 @@ export const Main = () => {
           }}
           className={currentActive === "react" ? "active" : null}
         >
-          React & MUI
+          React
         </button>
         <button
           onClick={() => {
@@ -82,7 +82,7 @@ export const Main = () => {
                 key={item.imgPath}
                 className="card"
               >
-                <img width={"100%"} src={item.imgPath} alt="" />
+                <img width={"100%"} src={item.imgPath} alt="Project Image" />
 
                 <div className="box">
                   <h1 className="title">{item.projectTitle}</h1>
@@ -90,14 +90,25 @@ export const Main = () => {
 
                   <div className="flex icons">
                     <div style={{ gap: "11px" }} className="flex">
-                      <div onClick={() => copyLink(item.productLink)}>
-                        <GoLink />
-                      </div>
-                      <div>
-                        <a target="plank" href={item.productLink}>
-                          <FaGithub />
-                        </a>
-                      </div>
+                      {item.productLink ? (
+                        <>
+                          <div onClick={() => copyLink(item.productLink)}>
+                            <GoLink />
+                          </div>
+                          <div>
+                            <a target="plank" href={item.productLink}>
+                              <FaGithub />
+                            </a>
+                          </div>
+                        </>
+                      ) : null}
+                      {item.viewLive ? (
+                        <div>
+                          <a title="Live show" target="plank" href={item.viewLive}>
+                            <RiSlideshow4Line />
+                          </a>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 </div>

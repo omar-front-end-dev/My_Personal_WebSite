@@ -3,7 +3,6 @@ import "./Hero.css";
 import devAnimation from "../../animation/dev.json";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -47,9 +46,9 @@ export const Hero = () => {
             initial={{ transform: "scale(0)" }}
             animate={{ transform: "scale(1.1)" }}
             transition={{ damping: 6, type: "spring", stiffness: 100 }}
-            src="./me-modified.jpg"
+            src="./om_4578.JPG"
             className="avatar"
-            alt=""
+            alt="My Image"
           />
         </div>
 
@@ -70,14 +69,6 @@ export const Hero = () => {
 
         <ul className="all-icons flex">
           <li>
-            <a
-              target="planck"
-              href="https://x.com/OmaRMoh1658290?t=fkzRWeEikF-xsJyHRLgcsQ&s=09"
-            >
-              <FaXTwitter className="icon" />
-            </a>
-          </li>
-          <li>
             <a target="planck" href="https://wa.me/qr/76MHCAVFHGDYO1">
               <FaWhatsapp className="icon" />
             </a>
@@ -96,7 +87,13 @@ export const Hero = () => {
             </a>
           </li>
         </ul>
-        <a target="blank" href="https://drive.google.com/file/d/11srQqaUMj69FPc8-dNcgdETYYXhHc58Z/view?usp=sharing" className="my-resume">My Resume</a>
+        <a
+          target="blank"
+          href="https://drive.google.com/file/d/1CB938d1T9olkU4WCz8dMYM7MmO3Kv9kJ/view?usp=sharing"
+          className="my-resume"
+        >
+          My Resume
+        </a>
       </div>
 
       <div className="right-section animation ">
