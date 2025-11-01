@@ -104,7 +104,11 @@ export const Main = () => {
                       ) : null}
                       {item.viewLive ? (
                         <div>
-                          <a title="Live show" target="plank" href={item.viewLive}>
+                          <a
+                            title="Live show"
+                            target="plank"
+                            href={item.viewLive}
+                          >
                             <RiSlideshow4Line />
                           </a>
                         </div>

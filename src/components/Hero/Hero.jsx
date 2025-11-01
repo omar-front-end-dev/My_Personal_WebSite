@@ -89,7 +89,7 @@ export const Hero = () => {
         </ul>
         <a
           target="blank"
-          href="https://drive.google.com/file/d/1CB938d1T9olkU4WCz8dMYM7MmO3Kv9kJ/view?usp=sharing"
+          href="https://drive.google.com/file/d/105bRI1H7ln6YCWwrkuau7se-yzE3tF-H/view?usp=sharing"
           className="my-resume"
         >
           My Resume
