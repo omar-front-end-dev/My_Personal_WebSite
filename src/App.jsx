@@ -1,4 +1,4 @@
-import { Hero, Header, Main, Contact, Footer } from "./components/index"
+import { Hero, Header, Main, Contact, Footer, Skills } from "./components/index"
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -19,6 +19,8 @@ function App() {
       <Header />
 
       <Hero />
+      <div className="divider" />
+      <Skills />
       <div className="divider" />
       <Main />
       <div className="divider" />

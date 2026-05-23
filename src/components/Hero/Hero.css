@@ -24,6 +24,23 @@ section.hero .avatar {
   border: 1px solid darkorange;
   padding: 1px;
   box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section.hero .avatar-button {
+  border-radius: 50%;
+  display: flex;
+}
+
+section.hero .avatar-button:focus-visible {
+  outline: 1px solid var(--blue);
+  outline-offset: 8px;
+}
+
+section.hero .avatar-button:hover .avatar {
+  border: 1px solid var(--blue);
+  box-shadow: 0 0 26px rgba(93, 188, 252, 0.25);
 }
 
 section.hero h1.title {
@@ -61,6 +78,61 @@ section.hero .animation {
   width: 100%;
   translate: 100px;
 }
+
+section.hero .profile-modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(4px);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 1.5rem;
+  position: fixed;
+  z-index: 200;
+}
+
+section.hero .profile-modal-content {
+  background-color: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.35);
+  max-height: min(82vh, 620px);
+  max-width: min(88vw, 520px);
+  padding: 0.8rem;
+  position: relative;
+}
+
+section.hero .profile-modal-content img {
+  border-radius: 5px;
+  display: block;
+  height: auto;
+  max-height: calc(min(82vh, 620px) - 1.6rem);
+  max-width: 100%;
+  object-fit: contain;
+}
+
+section.hero .profile-modal-close {
+  align-items: center;
+  background-color: var(--bgHeader);
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  border-radius: 50%;
+  color: var(--subtitle);
+  display: flex;
+  font-size: 1.35rem;
+  height: 34px;
+  justify-content: center;
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  transition: 0.3s;
+  width: 34px;
+}
+
+section.hero .profile-modal-close:hover {
+  border: 1px solid rgb(244, 165, 96);
+  color: crimson;
+}
+
 .my-resume{
   background-color: rgba(36, 37, 46, 1);
   padding: 0.75rem 2rem;
@@ -90,6 +162,20 @@ section.hero .animation {
   }
   .my-resume{
     display: block;
+  }
+
+  section.hero .profile-modal {
+    padding: 1rem;
+  }
+
+  section.hero .profile-modal-content {
+    max-height: 78vh;
+    max-width: 88vw;
+    padding: 0.6rem;
+  }
+
+  section.hero .profile-modal-content img {
+    max-height: calc(78vh - 1.2rem);
   }
 }
 .my-resume:hover {
