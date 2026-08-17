@@ -15,11 +15,7 @@ export const Main = () => {
     setCurrentActive(buttonCategory);
 
     const newArr = myProjects.filter((item) => {
-      const ZZZ = item.category.find((myItem) => {
-        return myItem === buttonCategory;
-      });
-
-      return ZZZ === buttonCategory;
+      return item.category.includes(buttonCategory);
     });
 
     setArr(newArr);
@@ -60,13 +56,23 @@ export const Main = () => {
         >
           React
         </button>
+
         <button
           onClick={() => {
-            handleClick("css");
+            handleClick("shopify");
           }}
-          className={currentActive === "css" ? "active" : null}
+          className={currentActive === "shopify" ? "active" : null}
         >
-          HTML & CSS
+          Shopify
+        </button>
+
+        <button
+          onClick={() => {
+            handleClick("gohighlevel");
+          }}
+          className={currentActive === "gohighlevel" ? "active" : null}
+        >
+          GoHighLevel
         </button>
       </section>
 
